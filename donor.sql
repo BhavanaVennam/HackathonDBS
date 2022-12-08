@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2022 at 07:21 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- Generation Time: Dec 08, 2022 at 08:07 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,14 +28,20 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `donor_details` (
-  `donorname` text NOT NULL,
-  `donorid` int(10) NOT NULL,
-  `itemid` int(10) NOT NULL,
-  `address` varchar(30) NOT NULL,
-  `contactno` int(10) NOT NULL,
-  `email` varchar(20) NOT NULL,
-  `itemtype` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `d_id` int(10) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `phone` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `donor_details`
+--
+
+INSERT INTO `donor_details` (`d_id`, `username`, `password`, `email`, `phone`) VALUES
+(1, 'd1', '$2y$10$q26qXmrJZ73va', 'd1@gmail.com', 2147483647),
+(2, 'd2', '$2y$10$4VJ5DqecJUa.c', 'd2@gmail.com', 2147483647);
 
 --
 -- Indexes for dumped tables
@@ -45,7 +51,17 @@ CREATE TABLE `donor_details` (
 -- Indexes for table `donor_details`
 --
 ALTER TABLE `donor_details`
-  ADD PRIMARY KEY (`donorid`);
+  ADD PRIMARY KEY (`d_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `donor_details`
+--
+ALTER TABLE `donor_details`
+  MODIFY `d_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
