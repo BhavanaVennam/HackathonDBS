@@ -81,13 +81,7 @@
             <form action="includes/login.inc.php" method="POST">
                 <input type="text" name="username" placeholder="Username/E-mail" required><br><br>
                 <input type="password" name="password" placeholder="password" required><br><br>
-                <select name="d" required>
-                 <option ></option>   
-               <option >USER</option>
-               <option >ADMIN</option>
-  
-                 </select><br><br>
-                 <br>
+                
                 <a href="resetPassword.php">forget password?</a><br>
                 <input type="submit" name="submit" value="Login">
             </form>

@@ -33,14 +33,13 @@ if(!isset($_POST['submit']))
          } 
         else 
         {
-            // password hashing
-            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-            // insert the organizer into database
-            $sql = "INSERT INTO donor_details(username, email, password, phone) VALUES('$username','$email','$hashedPassword','$phone');";
+            
+            $sql = "INSERT INTO donor_details(username, email, password, phone) VALUES('$username','$email','$password','$phone');";
             $insertSuccess = mysqli_query($conn, $sql);
 
             if($insertSuccess)
              {
+
                 header("Location: ../login.php");
                 exit();
 
