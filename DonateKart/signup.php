@@ -13,9 +13,9 @@
         </a>
          
         <div class="nav-links">
-            <a href="donors.php">DONORS</a>
-            <a href="receivers.php">RECEIVERS</a>
-            <a href="admin.php">ADMIN</a>
+            <a href="#">DONORS</a>
+            <a href="#">RECEIVERS</a>
+            <a href="#">ADMIN</a>
         </div>
 
         <div class="btn-login-signup">
